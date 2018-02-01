@@ -6,12 +6,34 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'hdima/python-syntax'
 call plug#end()
 
+" syntastic setting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" use flake8 for linting python
+let g:syntastic_python_checkers = ['flake8']
+
+" ignore 80 char line limit
+let g:syntastic_python_flake8_args='--ignore=E501'
+
+" populate error list set to off. Re-enable by setting below to 1
+let g:syntastic_always_populate_loc_list = 2
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 syntax on
 let python_highlight_all = 1
 set background=dark
 colorscheme solarized
 let maplocalleader = ","
 let mapleader = "\\"
+
+" enable syntax highlighting for markdown
+:set syntax=markdown
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 set relativenumber 
 set number  
