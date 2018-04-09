@@ -2,14 +2,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'hdima/python-syntax'
+Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 " syntastic setting
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
+" nerdtree settings
+map <C-n> :NERDTreeToggle<CR> 
 
 " use flake8 for linting python
 let g:syntastic_python_checkers = ['flake8']
@@ -72,3 +77,4 @@ noremap <Right> <Nop>
 
 " image to display on Vim startup
 echo "Starting Vim" 
+
