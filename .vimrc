@@ -5,6 +5,7 @@ Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
 Plug 'altercation/vim-colors-solarized'
 Plug 'hdima/python-syntax'
+Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
@@ -15,6 +16,9 @@ set statusline+=%*
 
 " nerdtree settings
 map <C-n> :NERDTreeToggle<CR> 
+
+" syntax highlighting for javascript
+let g:javascript_plugin_jsdoc = 1
 
 " use flake8 for linting python
 let g:syntastic_python_checkers = ['flake8']
