@@ -15,7 +15,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " nerdtree settings
-map <C-n> :NERDTreeToggle<CR> 
+map <C-n> :NERDTreeToggle<CR>
 
 " syntax highlighting for javascript
 let g:javascript_plugin_jsdoc = 1
@@ -44,8 +44,8 @@ let mapleader = "\\"
 :set syntax=markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
-set relativenumber 
-set number  
+set relativenumber
+set number
 set nu
 
 " enables backspaces when using homebrew Vim
@@ -80,5 +80,4 @@ noremap <Right> <Nop>
 :nnoremap <c-u> viwU
 
 " image to display on Vim startup
-echo "Starting Vim" 
-
+echo "Loading...Press enter to continue"
